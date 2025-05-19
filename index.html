@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Assets/img/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Start Menu -->
+        <div id="start-screen" class="screen">
+            <h1>Snake Game</h1>
+            <button id="start-button">Start Game</button>
+            <div class="difficulty-selector">
+                <h3>Select Difficulty:</h3>
+                <div class="difficulty-options">
+                    <button class="difficulty-btn" data-speed="5">Easy</button>
+                    <button class="difficulty-btn active" data-speed="9">Medium</button>
+                    <button class="difficulty-btn" data-speed="15">Hard</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen hidden">
+            <h2>Game Over!</h2>
+            <p id="final-score">Score: 0</p>
+            <p id="high-score-display">High Score: 0</p>
+            <button id="restart-button">Play Again</button>
+            <button id="menu-button">Main Menu</button>
+        </div>
+
+        <!-- Main Game Area -->
+        <div id="game-area" class="hidden">
+            <div class="game-header">
+                <div class="scoreBox">Score: 0</div>
+                <div class="hiscoreBox">High Score: 0</div>
+                <div class="controls">
+                    <button id="pause-btn"><i class="fas fa-pause"></i></button>
+                    <button id="sound-btn"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+
+            <div class="board-container">
+                <div class="board"></div>
+            </div>
+
+            <div class="game-footer">
+                <div class="speedControl">
+                    <label for="speedSlider">Speed:</label>
+                    <input type="range" id="speedSlider" min="1" max="20" value="9">
+                    <span id="speedValue">9</span>
+                </div>
+
+                <!-- Mobile Controls -->
+                <div class="mobile-controls">
+                    <button id="up-btn"><i class="fas fa-arrow-up"></i></button>
+                    <div class="horizontal-controls">
+                        <button id="left-btn"><i class="fas fa-arrow-left"></i></button>
+                        <button id="right-btn"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <button id="down-btn"><i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Js/app.js"></script>
+</body>
+</html>
